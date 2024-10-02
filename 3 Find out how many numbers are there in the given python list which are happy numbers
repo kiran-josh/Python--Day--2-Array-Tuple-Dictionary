@@ -1,0 +1,31 @@
+"""
+Name: Kiran G
+Program: Given a Python list [10, 501, 22, 37, 100, 999, 87, 351] 
+Find out how many numbers are there in the given python list which are happy numbers?
+
+"""
+
+# Given list
+numbers = [10, 501, 22, 37, 100, 999, 87, 351]
+
+# List to store happy numbers
+happy_numbers = []
+
+# Check each number in the list
+for num in numbers:
+    seen = set()
+    original_num = num  # Store original number for reference
+    while num != 1 and num not in seen:
+        seen.add(num)
+        # Calculate the sum of the squares of the digits
+        num = sum(int(digit) ** 2 for digit in str(num))
+    
+    if num == 1:  # If we reach 1, it's a happy number
+        happy_numbers.append(original_num)
+
+# Count of happy numbers
+happy_count = len(happy_numbers)
+
+# Output the results
+print("Happy numbers:", happy_numbers)
+print("Count of happy numbers:", happy_count)

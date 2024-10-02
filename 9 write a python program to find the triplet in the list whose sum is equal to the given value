@@ -1,0 +1,29 @@
+"""
+Name: Kiran G
+Program: you have been given a python list [10,20,30,9] and a value of 59. 
+write a python program to find the triplet in the list whose sum is equal to the given value.
+
+
+"""
+
+
+# Given list and value
+numbers = [10, 20, 30, 9]
+target_sum = 59
+
+# Flag to check if a triplet is found
+triplet_found = False
+
+# Sort the list to make it easier to find triplets
+numbers.sort()
+
+# Find triplet
+for i in range(len(numbers) - 2):
+    for j in range(i + 1, len(numbers) - 1):
+        for k in range(j + 1, len(numbers)):
+            if numbers[i] + numbers[j] + numbers[k] == target_sum:
+                print(f"Triplet found: ({numbers[i]}, {numbers[j]}, {numbers[k]})")
+                triplet_found = True
+
+if not triplet_found:
+    print("No triplet found with the given sum.")

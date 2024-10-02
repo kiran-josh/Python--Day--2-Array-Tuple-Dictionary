@@ -1,0 +1,18 @@
+"""
+Name: Kiran G
+Program: you have been given a python list [10, 501,22, 37, 100, 999, 87, 351] your task is to 
+create two list one which have all the even numbers and another list which will have all the ODD numbers in it.
+
+"""
+
+
+# Given list
+numbers = [10, 501, 22, 37, 100, 999, 87, 351]
+
+# Creating lists for even and odd numbers
+even_numbers = [num for num in numbers if num % 2 == 0]
+odd_numbers = [num for num in numbers if num % 2 != 0]
+
+# Output the results
+print("Even numbers:", even_numbers)
+print("Odd numbers:", odd_numbers)
